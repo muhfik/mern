@@ -8,7 +8,7 @@ import IconTreasure from 'asset/images/icons/icons-treasure.svg';
 
 import Button from 'elements/Button';
 
-import formatNumber from 'utils/formatNumber';
+import formatNumber from 'json/utils/formatNumber';
 export default function Hero(props) {
 
     function showMostPicked() {
