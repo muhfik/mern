@@ -45,5 +45,5 @@ export default function Categories({ data }) {
                 }
             </div>
         </section>
-    })
+    });
 }
