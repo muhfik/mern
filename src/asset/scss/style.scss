@@ -63,6 +63,7 @@ header {
 
     .navbar {
         height: 80px;
+        padding: 0;
 
         .navbar-nav {
             li.nav-item {
@@ -230,8 +231,15 @@ footer {
     }
     
     .copyrights {
-        margin-top: 50px 0;
+        margin: 50px 0;
         font-weight: 300;
         color: $gray-500;
+    }
+}
+
+main {
+    p {
+        color: $gray-500;
+        font-weight: 300;
     }
 }

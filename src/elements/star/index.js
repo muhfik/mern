@@ -1,9 +1,9 @@
 import React from 'react';
 
-import propTypes from 'prop-types';
+import propTypes from "prop-types";
 import './index.scss';
 
-export default function star({ className, value, height, width, spacing }) {
+export default function Star({ className, value, height, width, spacing }) {
 
     const decimals = Number(value) % 1;
     const star = [];
@@ -13,7 +13,7 @@ export default function star({ className, value, height, width, spacing }) {
         star.push(
             <div
             className="star" 
-            key={'star- ${index}'} 
+            key={`star- ${index}`} 
             style={{ left: index * width, height: height, width: width, marginRight: spacing }}>
             </div>
         );
@@ -22,7 +22,7 @@ export default function star({ className, value, height, width, spacing }) {
     star.push(
         <div
         className="star" 
-        key={'starWithDecimals'} 
+        key={`starWithDecimals`} 
         style={{ left: leftPos, height: height, width: decimals * width - spacing }}>
         </div>
     );
@@ -47,7 +47,7 @@ export default function star({ className, value, height, width, spacing }) {
     );
 }
 
-star.propTypes = {
+Star.propTypes = {
     className: propTypes.string,
     value: propTypes.number,
     width: propTypes.number,

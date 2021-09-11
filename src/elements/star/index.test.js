@@ -12,15 +12,15 @@ test("Should have props [value, height, width, spacing", () => {
 
     expect(container.querySelector("div.stars")).toBeInTheDocument();
     expect(container.querySelector("div.stars")).toHaveAttribute(
-        "style", expect.stringContaining('height: $ {height}px'));
+        "style", expect.stringContaining(`height: ${height}px`));
     expect(container.querySelector(starYellow)).toBeInTheDocument();
     expect(container.querySelector(starYellow)).toHaveAttribute(
         "style", 
-        expect.stringContaining('width: ${width}px'));
+        expect.stringContaining(`width: ${width}px`));
     expect(container.querySelector(starYellow)).toHaveAttribute(
         "style", 
-        expect.stringContaining('height: ${height}px'));
+        expect.stringContaining(`height: ${height}px`));
     expect(container.querySelector(starYellow)).toHaveAttribute(
         "style", 
-        expect.stringContaining('margin-right: ${spacing}px'));
+        expect.stringContaining(`margin-right: ${spacing}px`));
 });

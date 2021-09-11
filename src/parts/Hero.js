@@ -1,10 +1,7 @@
 import React from 'react';
-
+import Fade from 'react-reveal/Fade';
 import ImageHero from 'asset/images/img-hero.jpg';
 import ImageHeroFrame from 'asset/images/img-hero-frame.jpg';
-import IconCities from 'asset/images/icons/icons-cities.svg';
-import IconTraveller from 'asset/images/icons/icons-traveller.svg';
-import IconTreasure from 'asset/images/icons/icons-treasure.svg';
 
 import Button from 'elements/Button';
 
@@ -19,6 +16,7 @@ export default function Hero(props) {
     }
 
     return (
+        <Fade bottom>
         <section className="container pt-4">
             <div className="row align-items-center">
                 <div className="col-auto pr-5" style={{ width: 530 }}>
@@ -36,8 +34,8 @@ export default function Hero(props) {
                     <div className="row" style={{ marginTop: 80 }}>
                         <div className="col-auto" style={{ marginRight: 35 }}>
                             <img width="36" height="36"
-                            src={IconTraveller} 
-                            alt={'${props.data.travelers} Traveller'} />
+                            src="/images/icons-traveller.svg"
+                            alt="Traveller"/>
                             <h6 className="mt-3">
                                 {formatNumber(props.data.travelers)}{""}
                             <span className="text-gray-500 font-weight-light"> travelers</span>
@@ -45,8 +43,8 @@ export default function Hero(props) {
                         </div>
                         <div className="col-auto" style={{ marginRight: 35 }}>
                             <img width="36" height="36"
-                            src={IconTreasure} 
-                            alt={'${props.data.treasures} Treasures'} />
+                            src="/images/icons-treasure.svg"
+                            alt="Treasures"/>
                             <h6 className="mt-3">
                                 {formatNumber(props.data.treasures)}{""}
                             <span className="text-gray-500 font-weight-light"> treasures</span>
@@ -54,8 +52,8 @@ export default function Hero(props) {
                         </div>
                         <div className="col-auto">
                             <img width="36" height="36"
-                            src={IconCities} 
-                            alt={'${props.data.cities} Cities'} />
+                            src="/images/icons-cities.svg"
+                            alt="Cities"/>
                             <h6 className="mt-3">
                                 {formatNumber(props.data.cities)}{""}
                             <span className="text-gray-500 font-weight-light"> cities</span>
@@ -77,5 +75,6 @@ export default function Hero(props) {
                 </div>
             </div>
         </section>
+        </Fade>
     );
 };
