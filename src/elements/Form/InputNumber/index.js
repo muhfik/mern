@@ -38,7 +38,7 @@ export default function Number(props) {
     };
 
     const plus = () => {
-        value > min &&
+        value < max &&
         onChange({
             target: {
                 name: name,
@@ -66,7 +66,7 @@ export default function Number(props) {
                     onChange={onChange}
                 />
                 <div className="input-group-append">
-                    <span className="input-group-text minus" onClick={minus}>
+                    <span className="input-group-text plus" onClick={plus}>
                     +
                 </span>
                 </div>

@@ -14,8 +14,8 @@ export default class BookingForm extends Component {
             data: {
                 duration: 1,
                 date: {
-                    startDate: new Data(),
-                    endData: new Data(),
+                    startDate: new Date(),
+                    endDate: new Date(),
                     key: "selection"
                 }
             }
@@ -37,7 +37,7 @@ export default class BookingForm extends Component {
 
         if (prevState.data.date !== data.date) {
             const startDate = new Date(data.date.startDate);
-            const endDate = new Date(data.date.endData);
+            const endDate = new Date(data.date.endDate);
             const countDuration = new Date(endDate - startDate).getDate();
             this.setState({
                 data: {
@@ -71,7 +71,7 @@ export default class BookingForm extends Component {
         const { itemDetails, startBooking } = this.props;
 
         return (
-            <div className="card bordered" style={{paddig: '60px 80px'}}>
+            <div className="card bordered" style={{padding: '60px 80px'}}>
                 <h4 className="mb-3">Start Booking</h4>
                 <h5 className="h2 text-teal mb-4">
                     ${itemDetails.price}{" "}
@@ -103,6 +103,16 @@ export default class BookingForm extends Component {
                         {data.duration} {itemDetails.unit}
                     </span>
                 </h6>
+
+                <Button 
+                className="btn"
+                hasShadow
+                isPrimary
+                isBlock
+                onClick={startBooking}
+                >
+                    Continue to book
+                </Button>
 
             </div>
         );
