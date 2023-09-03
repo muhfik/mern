@@ -20,7 +20,7 @@ export default function Stepper(props) {
     function nextStep() {
         if (+indexStep < totalStep) setCurrentStep(stepsKeys[indexStep + 1]);
     }
-    return<> {props.children(prevStep, nextStep, CurrentStep, steps)} </>;
+    return <> {props.children(prevStep, nextStep, CurrentStep, steps)} </>;
 }
 
 Stepper.propTypes = {

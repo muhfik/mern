@@ -40,7 +40,7 @@ export default class Checkout extends Component {
         const { data } = this.state;
         const checkout = {
             duration: 3
-        }
+        };
         const steps = {
             bookingInformation: {
                 title: "Booking Infomation",
@@ -61,8 +61,8 @@ export default class Checkout extends Component {
                 content: (
                     <Payment
                     data={data}
-                    checkout={checkout}
                     ItemDetails={ItemDetails}
+                    checkout={checkout}
                     onChange={this.onChange} 
                     />
                 ),
@@ -73,7 +73,8 @@ export default class Checkout extends Component {
                 description: null,
                 content: <Completed />
             }
-        }
+        };
+        
         return (
            <>
            <Header isCentered />

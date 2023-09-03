@@ -83,7 +83,7 @@ export default class BookingForm extends Component {
                 <label htmlFor="duration">How long you will stay?</label>
                 <InputNumber
                 max={30}
-                suffix={" night"}
+                suffix={" nights"}
                 isSuffixPlural
                 onChange={this.updateData}
                 name="duration"
@@ -110,6 +110,7 @@ export default class BookingForm extends Component {
                 isPrimary
                 isBlock
                 onClick={startBooking}
+                href={'/'}
                 >
                     Continue to book
                 </Button>

@@ -21,7 +21,7 @@ ol.stepper {
         border-radius: $size;
         color: $white;
 
-        &:after {
+        &::after {
             position: absolute;
             content: "";
             z-index: 2;
@@ -35,10 +35,10 @@ ol.stepper {
             transform: scale(1);
             transition: 0.35s transform ease-in-out;
         }
-    
+   
         &:not(:last-child) {
             margin-right: 60px;
-            &::before{
+            &::before {
                 content: "";
                 z-index: -2;
                 top: 50%;
@@ -51,7 +51,7 @@ ol.stepper {
         }
 
         &.active {
-            &:after {
+            &::after {
                 z-index: -1;
                 background: $white;
                 border: 1px solid $stepperMainColor;
@@ -63,7 +63,7 @@ ol.stepper {
             & ~ li {
                 color: $gray-500;
                 background: $stepperMainColor;
-                &:after {
+                &::after {
                     content: none;
                 }
             }
